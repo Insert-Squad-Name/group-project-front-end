@@ -15,217 +15,241 @@
 
 <body class="container-fluid">
   <div id="page1">
-  <nav class="navbar navbar-default">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <!-- Button trigger sign in modal -->
-        <button type="button" class="btn btn-default navbar-btn sign-btns" data-toggle="modal" data-target="#sign-up-modal">Sign Up</button>
-        <!--         Sign Up Modal         -->
-        <!-- Modal -->
-        <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="diffModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Sign Up Here!</h4>
-              </div>
-              <div class="modal-body">
-                <form id='sign-up'>
-                  <div class="form-group">
-                    <label for="emailInput">Username</label>
-                    <input type="text" name="credentials[email]" class="form-control" id="emailInput" placeholder="Username">
-                  </div>
-                  <div class="form-group">
-                    <label for="regPass">Password</label>
-                    <input type="password" name="credentials[password]" class="form-control" id="regPass" placeholder="Password">
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary">Sign Up!</button>
-                </form>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <!-- Modal -->
+          <div class="modal fade" id="sign-up-modal" tabindex="-1" role="dialog" aria-labelledby="diffModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="exampleModalLabel">Sign Up Here!</h4>
+                </div>
+                <div class="modal-body">
+                  <form id='create-page'>
+                    <div class="form-group">
+                      <label for="emailInput">Username</label>
+                      <input type="text" name="credentials[email]" class="form-control" id="emailInput" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label for="regPass">Password</label>
+                      <input type="password" name="credentials[password]" class="form-control" id="regPass" placeholder="Password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary">Sign Up!</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
 
 
-        <!-- Button trigger sign in modal -->
-        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
-        <!--         Sign In Modal         -->
-        <!-- Modal -->
-        <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="diffModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="exampleModalLabel">Sign In!</h4>
-              </div>
-              <div class="modal-body">
-                <form class="form" id='sign-in'>
-                  <div class="form-group">
-                    <label class="sr-only" for="emailInput">Username</label>
-                    <input type="text" name="credentials[email]" class="form-control" id="emailInput" placeholder="Username">
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="regPass">Password</label>
-                    <input type="password" name="credentials[password]" class="form-control" id="regPass" placeholder="Password">
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary sign-btns">Sign In</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-
-
-
-        <!-- Sign out Button -->
-        <button type="button" id='sign-out' class="btn btn-default navbar-btn">Sign out</button>
-
-
-
-        <!-- Change Password -->
-        <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#change-pw-modal">Change Password</button>
-
-        <!-- Modal -->
-        <div class="modal fade" id="change-pw-modal" tabindex="-1" role="dialog" aria-labelledby="diffModalLabel">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-              </div>
-              <div class="modal-body">
-                <form class="form-inline" id='change-password'>
-                  <div class="form-group">
-                    <label class="sr-only" for="oldPass">Old Password</label>
-                    <input type="password" name="passwords[old]" class="form-control" id="oldPass" placeholder="New Password">
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="newPass">New Password</label>
-                    <input type="password" name="passwords[new]" class="form-control" id="newPass" placeholder="Old Password">
-                  </div>
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                <button type="submit" class="btn btn-primary sign-btns">Change Password</button>
-                </form>
+          <!-- Button trigger sign in modal -->
+          <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#sign-in-modal">Sign In</button>
+          <!--         Sign In Modal         -->
+          <!-- Modal -->
+          <div class="modal fade" id="sign-in-modal" tabindex="-1" role="dialog" aria-labelledby="diffModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                  <h4 class="modal-title" id="exampleModalLabel">Sign In!</h4>
+                </div>
+                <div class="modal-body">
+                  <form class="form" id='sign-in'>
+                    <div class="form-group">
+                      <label class="sr-only" for="emailInput">Username</label>
+                      <input type="text" name="credentials[email]" class="form-control" id="emailInput" placeholder="Username">
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="regPass">Password</label>
+                      <input type="password" name="credentials[password]" class="form-control" id="regPass" placeholder="Password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary sign-btns">Sign In</button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
+
+
+          <!-- Sign out Button -->
+          <button type="button" id='sign-out' class="btn btn-default navbar-btn">Sign out</button>
+
+
+
+          <!-- Change Password -->
+          <button type="button" class="btn btn-default navbar-btn" data-toggle="modal" data-target="#change-password-modal">Change Password</button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="change-password-modal" tabindex="-1" role="dialog" aria-labelledby="diffModalLabel">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                </div>
+                <div class="modal-body">
+                  <form class="form-inline" id='change-password'>
+                    <div class="form-group">
+                      <label class="sr-only" for="oldPass">Old Password</label>
+                      <input type="password" name="passwords[old]" class="form-control" id="oldPass" placeholder="New Password">
+                    </div>
+                    <div class="form-group">
+                      <label class="sr-only" for="newPass">New Password</label>
+                      <input type="password" name="passwords[new]" class="form-control" id="newPass" placeholder="Old Password">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  <button type="submit" class="btn btn-primary sign-btns">Change Password</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
+    </nav>
+    <!-- NAVBAR ENDS -->
+
+    <h1 class="website-title">My Beaver's Sand Puppy</h1>
+
+
+    <!-- Carousel Start -->
+
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item">
+          <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Example headline.</h1>
+              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Another example headline.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item active">
+          <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>One more for good measure.</h1>
+              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
     </div>
-  </nav>
-  <!-- NAVBAR ENDS -->
 
-  <h1 class="website-title">My Beaver's Sand Puppy</h1>
+    <!-- Carousel End -->
 
-
-  <!-- Carousel Start -->
-
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class=""></li>
-      <li data-target="#myCarousel" data-slide-to="1" class=""></li>
-      <li data-target="#myCarousel" data-slide-to="2" class="active"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-      <div class="item">
-        <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Example headline.</h1>
-            <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="item">
-        <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="item active">
-        <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>One more for good measure.</h1>
-            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-            <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-  </div>
-
-  <!-- Carousel End -->
-
-  <!-- Marketing messaging and featurettes
+    <!-- Marketing messaging and featurettes
   ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
 
-  <div class="container marketing">
+    <div class="container marketing">
 
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+      <!-- Three columns of text below the carousel -->
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
+        </div>
+        <!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
+          <h2>Heading</h2>
+          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+        </div>
+        <!-- /.col-lg-4 -->
       </div>
-      <!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-        <h2>Heading</h2>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-      </div>
-      <!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-      </div>
-      <!-- /.col-lg-4 -->
+      <!-- /.row -->
     </div>
-    <!-- /.row -->
+    <!-- FOOTER -->
+    <footer>
+      <p class="pull-right"><a href="#">Back to top</a></p>
+      <p>Built by Jeremiah Damiron, Jason Liang, Kevin Pie, and Robert Ruttenberger</p>
+    </footer>
   </div>
-  <!-- FOOTER -->
-  <footer>
-    <p class="pull-right"><a href="#">Back to top</a></p>
-    <p>Built by Jeremiah Damiron, Jason Liang, Kevin Pie, and Robert Ruttenberger</p>
-  </footer>
-</div>
   <div id="page2">
     <div id="sidebar">
       <div class="profile-pic"></div>
       <div class="username">Username</div>
       <ul id="sidebar-list">
-        <li class="sidebar-items"><i class="material-icons" style="font-size:40px;text-shadow:2px 2px 4px #000000;">control_point</i></li>
+        <li class="sidebar-items"><i class="material-icons create-page" data-toggle="modal" data-target="#create-page-modal" style="font-size:40px;text-shadow:2px 2px 4px #000000;">control_point</i></li>
         <li class="sidebar-items"><i class="material-icons" style="font-size:40px;text-shadow:2px 2px 4px #000000;">remove_red_eye</i></li>
         <li class="sidebar-items"><i class="material-icons" style="font-size:40px;text-shadow:2px 2px 4px #000000;">tag_faces</i></li>
         <li class="sidebar-items"><i class="material-icons" style="font-size:40px;text-shadow:2px 2px 4px #000000;">check_circle</i></li>
         <li class="sidebar-items"><i class="material-icons page2-sign-out" style="font-size:40px;text-shadow:2px 2px 4px #000000;">exit_to_app</i></li>
       </ul>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="create-page-modal" tabindex="-1" role="dialog" aria-labelledby="diffModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="exampleModalLabel">Page Title</h4>
+          </div>
+
+          <form id='create-page'>
+            <div class="modal-body">
+              <div class="form-group">
+                <label for="blog">Make it happen!</label>
+                <input type="text" name="title" class="form-control" id="createPage" placeholder="What you gonna call it?">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary">Let's do this!</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
     <!-- /.navbar -->
 
@@ -302,4 +326,5 @@
     </svg>
   </div>
 </body>
+
 </html>
