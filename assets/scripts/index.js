@@ -11,6 +11,7 @@ const myApp = {
 };
 
 const userActions = require('./user-actions.js');
+const entryActions = require('./entry-actions');
 
 $(document).ready(() => {
   $('#sign-up').on('submit', userActions.signUp);
@@ -19,4 +20,5 @@ $(document).ready(() => {
   $('.page2-sign-out').on('click', userActions.signOut);
   $('#change-password').on('submit', userActions.changePassword);
   $('#page2').hide();
+  $('#entry-view').on('submit', userActions.createEntry);
 });
