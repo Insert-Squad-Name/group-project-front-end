@@ -10,6 +10,12 @@
   <script>
   tinymce.init({
   selector: 'textarea',
+  setup: function (editor) {
+        editor.on('change', function () {
+            editor.save();
+        });
+    }
+});
   height: 500,
   theme: 'modern',
   plugins: [
@@ -149,11 +155,6 @@
 
   <h1 class="website-title">My Beaver's Sand Puppy</h1>
 
-  <form class="form" id='entry-view'>
-    <textarea></textarea>
-    <button type="submit" class="btn btn-primary">Create dat entry</button>
-  </form>
-
 
   <!-- Carousel Start -->
 
@@ -256,6 +257,14 @@
       </ul>
     </div>
     <!-- /.navbar -->
+
+
+    <form class="form" id='entry-view'>
+      <textarea></textarea>
+      <input type="text" name="body" class="form-control" id="entry">
+      <button type="submit" class="btn btn-primary">Create dat entry</button>
+    </form>
+
 
     <div class="pages-container">
       <div class="row row-offcanvas row-offcanvas-right">
