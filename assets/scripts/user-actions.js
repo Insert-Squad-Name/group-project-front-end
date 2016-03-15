@@ -1,8 +1,7 @@
 'use strict';
 
-const myApp = {
-  BASE_URL: 'http://localhost:3000',
-};
+const myApp = require('./my-app.js');
+
 
 let page2Handler = function () {
   $('#page2').show();
@@ -31,6 +30,7 @@ let signUp = function(e) {
 };
 
 let signIn = function(e) {
+  console.log(myApp.BASE_URL);
   e.preventDefault();
   let formData = new FormData(e.target);
   $.ajax({
