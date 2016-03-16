@@ -8,9 +8,9 @@ require('./example');
 
 const myApp = require('./my-app');
 
-const userActions = require('./user-actions.js');
+const userActions = require('./user-actions');
 const entryActions = require('./entry-actions');
-const pageActions = require('./page-actions.js');
+const pageActions = require('./page-actions');
 const pageSwitch = require('./switch-pages');
 
 $(document).ready(() => {
@@ -21,8 +21,8 @@ $(document).ready(() => {
   //TODO refactor to use promise?
   $('#sign-in').on('submit', function(e) {
     userActions.signIn(e, pageActions.pageUserIndex);
-    // page.pageUserIndex();
   });
+
   $('#sign-out-button').on('click', userActions.signOut);
   $('.page2-sign-out').on('click', userActions.signOut);
   $('#change-password').on('submit', userActions.changePassword);
@@ -39,7 +39,11 @@ $(document).ready(() => {
 
   $('.pages-collection').on('click', '.show-page', pageActions.pageShow);
   $('.pages-collection').on('click', '.close-page-button', pageActions.deletePage);
-  $('.display-entries').on('click', '.close-entry-button', pageActions.deleteEntry);
+
+  $('.display-entries').on('click', '.close-entry-button', function(e) {
+    entryActions.deleteEntry(e, pageActions.pageShow)
+  });
+
   $('#page2').hide();
   $('#page3').hide();
   $('#create-entry').on('click', function(e) {
