@@ -115,21 +115,7 @@ let deletePage = function (event) {
   });
 };
 
-//DELETE ENTRIES
-let deleteEntry = function (event) {
-  event.preventDefault();
-  $.ajax({
-    url: myApp.BASE_URL + '/entries/' + $(event.target).attr("entry-id"),
-    method: 'DELETE',
-    headers: {
-      Authorization: 'Token token=' + myApp.user.token,
-    },
-  }).done(function() {
-    console.log("Successfully deleted entry.");
-  }).fail(function(jqxhr) {
-    console.error(jqxhr);
-  });
-};
+
 
 
 module.exports = {
@@ -138,5 +124,4 @@ module.exports = {
   pageIndex,
   pageUserIndex,
   pageShow,
-  deleteEntry,
 };

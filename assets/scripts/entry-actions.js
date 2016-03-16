@@ -52,6 +52,23 @@ let createEntry = function(e, pageShow) {
   });
 };
 
+//DELETE ENTRIES
+let deleteEntry = function (event, showPage) {
+  event.preventDefault();
+  $.ajax({
+    url: myApp.BASE_URL + '/entries/' + $(event.target).attr("entry-id"),
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + myApp.user.token,
+    },
+  }).done(function() {
+    console.log("Successfully deleted entry.");
+    showPage();
+  }).fail(function(jqxhr) {
+    console.error(jqxhr);
+  });
+};
+
 
   // display rating
   // let displayEntries = function(response) {
@@ -84,5 +101,6 @@ let createEntry = function(e, pageShow) {
 
 module.exports = {
   createEntry,
+  deleteEntry,
   // showEntries
 };
