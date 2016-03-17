@@ -6,7 +6,7 @@ const entryActions = require('./entry-actions.js');
 const pageSwitch = require('./switch-pages');
 
 let displayPages = function(response) {
-  let pages = response.pages;
+  let pages = formatEntries(response.pages);
   let pagesTemplate = require('../handlebars/directory-pages.handlebars');
   $('.pages-collection').html(pagesTemplate({pages}));
 };
