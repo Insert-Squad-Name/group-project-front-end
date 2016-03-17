@@ -122,10 +122,11 @@ let deletePage = function (event) {
 /* HELPER FUNCTIONS */
 let formatEntries = function (entries) {
   entries.reverse();
+  entries.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/);
   entries.forEach(function(cV, i, a) {
     let ISOdate = new Date(cV.createdAt);
      cV.createdAt = ISOdate.toLocaleString();
-  })
+  });
   return entries;
 };
 
