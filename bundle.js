@@ -576,7 +576,7 @@ webpackJsonp([0],[
 	    + alias4(((helper = (helper = helpers.title || (depth0 != null ? depth0.title : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"title","hash":{},"data":data}) : helper)))
 	    + "</h2>\n  <h4>"
 	    + alias4(((helper = (helper = helpers.createdAt || (depth0 != null ? depth0.createdAt : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"createdAt","hash":{},"data":data}) : helper)))
-	    + "<h4>\n  <p><a class=\"btn btn-default show-page\" href=\"#\" role=\"button\" data-page-id=\""
+	    + "</h4>\n  <p><a class=\"btn btn-default show-page\" href=\"#\" role=\"button\" data-page-id=\""
 	    + alias4(((helper = (helper = helpers._id || (depth0 != null ? depth0._id : depth0)) != null ? helper : alias2),(typeof helper === alias3 ? helper.call(alias1,{"name":"_id","hash":{},"data":data}) : helper)))
 	    + "\">View Page</a></p>\n</div>\n";
 	},"compiler":[7,">= 4.0.0"],"main":function(container,depth0,helpers,partials,data) {
