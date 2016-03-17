@@ -5,8 +5,20 @@ const myApp = require('./my-app');
 const entryActions = require('./entry-actions.js');
 const pageSwitch = require('./switch-pages');
 
+/* HELPER FUNCTIONS */
+let formatEntries = function (entries) {
+  entries.reverse();
+  entries.forEach(function(cV, i, a) {
+    let ISOdate = new Date(cV.createdAt);
+     cV.createdAt = ISOdate.toLocaleString();
+  });
+  return entries;
+};
+
+
 let displayPages = function(response) {
   let pages = formatEntries(response.pages);
+  console.log(response.pages);
   let pagesTemplate = require('../handlebars/directory-pages.handlebars');
   $('.pages-collection').html(pagesTemplate({pages}));
 };
